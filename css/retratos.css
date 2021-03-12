@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+body{
+    margin: 0px;
+    font-family: 'Dancing Script', cursive;
+}
+header{
+    background-color: #5b7989;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px 10px 0 0;
+}
+header {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  @keyframes slidein {
+    from {
+      margin-top: 150%;
+      width: 300%
+    }
+  
+    to {
+      margin-top: 0%;
+      width: 100%;
+    }
+  }
+h1{
+    color: white;
+    text-shadow: 2px 2px #02010a;
+}
+ul li{
+    list-style: none;
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 0 4px;
+}
+ul li a{
+    color: white;
+}
+.seleccionado{ /*item seleccionado del menu*/
+    text-decoration: none;
+}
+footer{
+    border-radius: 0 0 10px 10px;
+    background-color: #C6d5c5;
+    display: flex;
+    flex-wrap: wrap;
+}
+footer div{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+}
+footer i{
+    color: #696767;
+}
+.fotos-paisajes{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #d5c75f;
+    padding: 20px;
+}
+.foto{
+    width: 33.3%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.foto img{
+    box-shadow: 2px 2px black;
+}
+.foto:first-child{
+    filter: blur(10px);
+}
+.foto:nth-child(even){
+    filter: grayscale(1);
+}
+.foto:nth-child(3){
+    filter: sepia(95%)
+}
+@media screen and (max-width: 900px){
+    .foto{
+        width: 100%;
+        text-align: center;
+    }
+    footer div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 901px) and (max-width: 1200px){
+    footer div{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+}
